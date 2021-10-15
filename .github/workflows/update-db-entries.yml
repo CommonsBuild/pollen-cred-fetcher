@@ -1,5 +1,5 @@
 name: Update DB entries
-on: 
+on:
   schedule:
     - cron: 0 0,6,12,18 * * *
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
       NODE_OPTIONS: --max_old_space_size=7168
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Install Packages 🔧
         run: npm install
 
